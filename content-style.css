@@ -1,0 +1,13 @@
+.ytp-progress-bar {
+  display: none;
+}
+
+.ytp-time-duration,
+.ytp-time-separator {
+  visibility: hidden;
+}
+
+#related,
+#comments {
+  display: none;
+}
