@@ -1,6 +1,6 @@
 {
-  "name": "Spoiler Free Youtube",
-  "description": "Hide comments, related content and video progression when watching videos on youtube.",
+  "name": "Test Extension",
+  "description": "Testing!",
   "version": "0.1",
   "manifest_version": 3,
   "background": {
@@ -13,6 +13,11 @@
     "css": ["content-style.css"]
   }],
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/baseline_video_settings_black_16dp.png",
+      "32": "icons/baseline_video_settings_black_32dp.png",
+      "48": "icons/baseline_video_settings_black_48dp.png"
+    }
   }
 }
