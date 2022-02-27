@@ -1,6 +1,6 @@
 {
-  "name": "Test Extension",
-  "description": "Testing!",
+  "name": "Spoiler Free Youtube",
+  "description": "Hide comments, related content and video progression when watching videos on youtube.",
   "version": "0.1",
   "manifest_version": 3,
   "background": {
