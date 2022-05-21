@@ -11,6 +11,10 @@
   visibility: hidden;
 }
 
+.ytp-ce-element {
+  display: none !important;
+}
+
 #related,
 #comments {
   display: none;

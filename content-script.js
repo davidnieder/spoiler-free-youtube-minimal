@@ -3,6 +3,7 @@
 document.addEventListener('yt-navigate-finish', () => {
   chrome.storage.local.get(null, (settings) => {
     setTimeVisibility(settings.hideTime);
+    setOverlayVisibility(settings.hideOverlay);
     setRelatedContentVisibility(settings.hideRelated);
     setCommentVisibility(settings.hideComments);
   });
@@ -11,6 +12,9 @@ document.addEventListener('yt-navigate-finish', () => {
 chrome.storage.local.onChanged.addListener((change) => {
   if ('hideTime' in change) {
     setTimeVisibility(change.hideTime.newValue);
+  }
+  if ('hideOverlay' in change) {
+    setOverlayVisibility(change.hideOverlay.newValue);
   }
   if ('hideRelated' in change) {
     setRelatedContentVisibility(change.hideRelated.newValue);
@@ -36,6 +40,16 @@ function setTimeVisibility(hideTime) {
     $timeDuration.style.visibility = 'visible';
     $timeSeparator.style.visibility = 'visible';
     $chapterContainer.style.display = 'block';
+  }
+}
+
+function setOverlayVisibility(hideOverlay) {
+  let $overlayContainers = document.querySelectorAll('.ytp-ce-element');
+
+  if (hideOverlay) {
+    $overlayContainers.forEach(el => el.style.setProperty('display', 'none', 'important'));
+  } else {
+    $overlayContainers.forEach(el => el.style.setProperty('display', 'initial', 'important'));
   }
 }
 

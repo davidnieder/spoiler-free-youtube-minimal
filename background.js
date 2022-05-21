@@ -2,6 +2,7 @@
 
 let defaultSettings = {
   hideTime: true,
+  hideOverlay: true,
   hideRelated: true,
   hideComments: true
 };
