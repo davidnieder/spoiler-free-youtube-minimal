@@ -24,25 +24,31 @@ function setTimeVisibility(hideTime) {
   let $progressBar = document.querySelector('.ytp-progress-bar');
   let $timeDuration = document.querySelector('.ytp-time-duration');
   let $timeSeparator = document.querySelector('.ytp-time-separator');
+  let $chapterContainer = document.querySelector('.ytp-chapter-container');
 
   if (hideTime) {
     $progressBar.style.display = 'none';
     $timeDuration.style.visibility = 'hidden';
     $timeSeparator.style.visibility = 'hidden';
+    $chapterContainer.style.display = 'none';
   } else {
     $progressBar.style.display = 'block';
     $timeDuration.style.visibility = 'visible';
     $timeSeparator.style.visibility = 'visible';
+    $chapterContainer.style.display = 'block';
   }
 }
 
 function setRelatedContentVisibility(hideRelated) {
   let $relatedContent = document.querySelector('#related');
+  let $endscreen = document.querySelector('.html5-endscreen');
 
   if (hideRelated) {
     $relatedContent.style.display = 'none';
+    $endscreen.style.display = 'none';
   } else {
     $relatedContent.style.display = 'flex';
+    $endscreen.style.display = 'block';
   }
 }
 

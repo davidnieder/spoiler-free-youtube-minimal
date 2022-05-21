@@ -2,6 +2,10 @@
   display: none;
 }
 
+.ytp-chapter-container {
+  display: none;
+}
+
 .ytp-time-duration,
 .ytp-time-separator {
   visibility: hidden;
@@ -9,5 +13,9 @@
 
 #related,
 #comments {
+  display: none;
+}
+
+.html5-endscreen {
   display: none;
 }
